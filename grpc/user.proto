@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+package user;
+
+service User{
+  rpc Search(UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest {
+  string username = 1;
+}
+
+message UserResponse {
+  string username = 1;
+  int32 id = 2;
+  bool found = 3;
+}
