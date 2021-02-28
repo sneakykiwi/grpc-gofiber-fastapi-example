@@ -32,12 +32,6 @@ func main() {
 
 type Server struct {}
 
-type UserData struct{
-	id int
-	username string
-	found bool
-}
-
 
 
 func (s Server) Search(ctx context.Context, request *user.UserRequest) (*user.UserResponse, error) {
